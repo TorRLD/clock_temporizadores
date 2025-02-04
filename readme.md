@@ -1,5 +1,10 @@
 # Clock e Temporizadores
 
+
+## Vídeo Demonstrativo:
+
+[Assista no Youtube](https://www.youtube.com/watch?v=O01UKLZ3Y6w)
+
 Este repositório contém **duas tarefas** que demonstram o uso do Raspberry Pi Pico (ou placa compatível com RP2040) para controle de LEDs e uso de temporizadores ( *timers* ) e callbacks. Ambas estão escritas em linguagem C e utilizam o  **Pico SDK** .
 
 ---
@@ -94,14 +99,10 @@ Este repositório contém **duas tarefas** que demonstram o uso do Raspberry Pi 
 
 ## Observações Gerais
 
-
-## Vídeo Demonstrativo:
-
-[Assista no Youtube](https://www.youtube.com/watch?v=O01UKLZ3Y6w)
-
 * Ambos os exemplos utilizam a **biblioteca-padrão** do Pico, com destaque para:
-  * `pico/stdlib.h` (GPIO, sleep, etc.)
-  * `pico/time.h` (temporizadores e alarms)
+
+* `pico/stdlib.h` (GPIO, sleep, etc.)
+* `pico/time.h` (temporizadores e alarms)
 * Certifique-se de que **a pinagem** corresponda ao seu hardware (especialmente se estiver usando alguma placa de expansão ou kit didático, como o BitDogLab).
 * Recomenda-se uma fonte de alimentação **estável** e resistores em série nos LEDs, conforme a documentação do Pico e boas práticas de eletrônica.
 * Você pode **observar a saída serial** (via USB) para debug ou mensagens adicionais.
