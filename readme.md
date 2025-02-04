@@ -94,6 +94,11 @@ Este repositório contém **duas tarefas** que demonstram o uso do Raspberry Pi 
 
 ## Observações Gerais
 
+
+## Vídeo Demonstrativo:
+
+[Assista no Youtube](https://www.youtube.com/watch?v=O01UKLZ3Y6w)
+
 * Ambos os exemplos utilizam a **biblioteca-padrão** do Pico, com destaque para:
   * `pico/stdlib.h` (GPIO, sleep, etc.)
   * `pico/time.h` (temporizadores e alarms)
