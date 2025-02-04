@@ -1,0 +1,73 @@
+{
+    "version": 1,
+    "author": "Pedro Henrique Miranda",
+    "editor": "wokwi",
+    "parts": [
+      {
+        "type": "board-pi-pico-w",
+        "id": "pico",
+        "top": -60.85,
+        "left": -121.25,
+        "attrs": { "builder": "pico-sdk" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": 109.55,
+        "left": -230.4,
+        "attrs": { "value": "330" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led1",
+        "top": 44.4,
+        "left": -274.6,
+        "attrs": { "color": "limegreen" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn1",
+        "top": -109,
+        "left": -240,
+        "attrs": { "color": "black" }
+      },
+      { "type": "wokwi-led", "id": "led2", "top": 6, "left": -274.6, "attrs": { "color": "red" } },
+      {
+        "type": "wokwi-led",
+        "id": "led3",
+        "top": -32.4,
+        "left": -274.6,
+        "attrs": { "color": "blue" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r2",
+        "top": 128.75,
+        "left": -230.4,
+        "attrs": { "value": "330" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r3",
+        "top": 147.95,
+        "left": -230.4,
+        "attrs": { "value": "330" }
+      }
+    ],
+    "connections": [
+      [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+      [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+      [ "pico:GND.4", "r1:2", "black", [ "h0" ] ],
+      [ "led1:C", "r1:1", "black", [ "v0" ] ],
+      [ "pico:GND.1", "btn1:1.r", "black", [ "h-28.8", "v-67.2" ] ],
+      [ "pico:GP5", "btn1:2.r", "green", [ "h0" ] ],
+      [ "pico:GP11", "led1:A", "green", [ "h0" ] ],
+      [ "led2:A", "pico:GP13", "red", [ "h19.2", "v57.56" ] ],
+      [ "led3:A", "pico:GP12", "blue", [ "h48", "v86.36" ] ],
+      [ "r3:2", "r2:2", "black", [ "v0" ] ],
+      [ "r2:2", "r1:2", "black", [ "v0" ] ],
+      [ "led3:C", "r3:1", "black", [ "v0", "h-38", "v144" ] ],
+      [ "r2:1", "led2:C", "black", [ "v0", "h-48", "v-86.4" ] ]
+    ],
+    "dependencies": {}
+  }
