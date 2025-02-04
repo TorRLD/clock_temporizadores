@@ -81,20 +81,12 @@ Este repositório contém **duas tarefas** que demonstram o uso do Raspberry Pi 
 
 ### Como Executar
 
-1. **Clonar ou copiar** os arquivos para o ambiente compatível com  **Pico SDK** .
-2. **Compilar** com CMake:
-   ```bash
-   mkdir build
-   cd build
-   cmake ..
-   make
-   ```
-3. **Enviar o `.uf2`** para a placa Pico (modo bootloader).
-4. **Conectar um botão** no GPIO 5 (com resistor de pull-up ou usando `gpio_pull_up()` conforme no código).
-5. **Conectar os LEDs** ou um módulo RGB conforme os pinos indicados.
-6. **Pressionar o botão** para observar a sequência: 3 LEDs → 2 LEDs → 1 LED → 0 LEDs.
-   * Durante a sequência, outras pressões de botão não serão reconhecidas.
-
+1. **Clonar** este repositório ou copiar os arquivos para uma pasta local no seu computador.
+2. **Abrir a pasta** no Visual Studio Code.
+3. **Certificar-se** de ter instalado e configurado a **extensão “Raspberry Pi Pico”** no VSCode (que já inclui o Pico SDK).
+4. **Na parte inferior do VSCode** (barra de status), selecione a placa “Raspberry Pi Pico” e aperte em **“Compile”** (ou “Build”) para gerar o arquivo `.uf2`.
+5. **Carregar o `.uf2`** na placa Pico: coloque o Pico em **modo bootloader** (conecte-o ao USB segurando o botão BOOTSEL ou conforme sua placa), e arraste o arquivo `.uf2` para a unidade que aparecer no seu computador.
+6. **Abrir um terminal serial** (via USB) para observar as mensagens impressas ou fazer interações adicionais conforme o projeto.
 ---
 
 ## Observações Gerais
